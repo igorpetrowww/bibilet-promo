@@ -1,0 +1,75 @@
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  color: inherit;
+  border-radius: 0;
+}
+
+a,
+button,
+input {
+  outline: none;
+  color: inherit;
+
+  &:focus-visible {
+    // outline: 1px solid var(--key);
+    // outline-offset: 3px;
+  }
+}

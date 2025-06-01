@@ -1,0 +1,44 @@
+.wrap {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.plate {
+  padding: 30px 25px;
+  border-radius: 32px;
+
+  @include on-sm {
+    padding: 20px 15px;
+  }
+
+  &.topGrad {
+    background: linear-gradient(to bottom, #C6FFF5, transparent);
+    background-size: 100% 75vh;
+    background-repeat: no-repeat;
+
+    @include on-sm {
+      padding: 20px 15px;
+      background-size: 100% 300px;
+    }
+  }
+}
+
+.switcher {
+  height: 100%;
+
+  &__item {
+    position: sticky;
+    top: 15px;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.disabled {
+  color: var(--pale);
+}

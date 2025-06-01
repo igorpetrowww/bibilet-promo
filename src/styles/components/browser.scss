@@ -1,0 +1,33 @@
+.browser {
+  color: var(--pale);
+  border-radius: 7px;
+  border: .5px solid;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+
+  &:before {
+    content: '***';
+    background: #fff;
+    padding: 5px;
+    text-align: center;
+    display: block;
+    border-bottom: .5px solid;
+
+    @include on-md {
+      padding: 3px;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  img {
+    aspect-ratio: 16/10;
+    object-fit: contain;
+    object-position: center;
+  }
+} 

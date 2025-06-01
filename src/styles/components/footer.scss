@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  gap: 40px;
+  padding: 0 25px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__about {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 540px;
+  }
+
+  &__nav {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    max-width: 540px;
+  }
+} 

@@ -1,0 +1,57 @@
+:root {
+  font-family: Inter, system-ui;
+  font-size: 18px;
+  line-height: 1.2;
+  text-box-trim: trim-both;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  & + & {
+    margin-top: var(--gap-p);
+  }
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-thickness: .5px;
+  text-underline-offset: .3em;
+  text-decoration-skip-ink: none;
+  text-decoration-color: color-mix(in srgb, currentColor 30%, transparent);
+
+  &:hover {
+    color: var(--key);
+  }
+}
+
+.sm {
+  --gap-p: .5em;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.lg {
+  font-size: 22px;
+}
+
+
+h2 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  
+  &:not(:last-child) {
+    margin-bottom: .3em;
+  }
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.1;
+  
+  &:not(:last-child) {
+    margin-bottom: .3em;
+  }
+}

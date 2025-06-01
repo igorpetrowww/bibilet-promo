@@ -1,0 +1,112 @@
+@import '_vars';
+@import '_reset';
+@import '_mixins';
+@import '_utils';
+@import '_typo';
+
+@import 'components/hero';
+@import 'components/header';
+@import 'components/features';
+@import 'components/browser';
+@import 'components/footer';
+
+body {
+  min-width: 375px;
+  padding: 20px 20px 30px;
+  box-sizing: border-box;
+
+  @include on-md {
+    padding: 10px 10px 20px;
+  }
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 100;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.cta {
+  margin-top: var(--gap-lg);
+  margin-bottom: var(--gap-lg);
+  background: #FFFEE2;
+  display: grid;
+  grid-template-columns: minmax(320px, 720px) 1fr;
+  gap: 0;
+
+  @include on-md {
+    grid-template-columns: 1fr;
+  }
+
+  &__try {
+    display: flex;
+    flex-direction: column;
+
+    @include from-lg {
+      padding-right: 20px;
+      border-right: .5px solid var(--pale);
+      margin-right: 20px;
+    }
+
+    @include on-md {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--pale);
+    }
+
+    .form {
+      margin-top: auto;
+    }
+  }
+
+  .faq {
+    max-width: 600px;
+  }
+}
+
+.faq {
+  column-count: 2;
+  column-gap: 40px;
+
+  &__item {
+    break-inside: avoid;
+    &:not(:last-child) {
+      margin-bottom: var(--gap-md);
+    }
+  }
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+
+  .input {
+    max-width: 250px;
+    width: 100%;
+  }
+}
+
+.input {
+  ::placeholder {
+    color: var(--pale);
+  }
+
+  input {
+    width: 100%;
+    padding: .5em;
+    box-sizing: border-box;
+    border-bottom: .5px solid var(--pale);
+  }
+}
+
+.btn {
+  padding: .5em;
+  box-sizing: border-box;
+  background: var(--key);
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+}
