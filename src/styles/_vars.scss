@@ -1,10 +1,17 @@
+@import '_mixins';
+
 :root {
-  --key: #ed6002;
-  --pale: #ABABAB;
+  --key: oklch(0.72 0.23 44.19);
+  --pale: #97adbe;
+  --pale2: rgb(232 237 243);
   
   --gap-md: 30px;
-  --gap-lg: 60px;
+  --gap-lg: 70px;
   --gap-xlg: 160px;
 
-  --gap-p: .3em;
+  --gap-p: .4em;
+
+  @include on-sm {
+   --gap-md: 20px;
+  }
 }

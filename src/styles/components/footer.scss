@@ -1,6 +1,7 @@
 .footer {
+  margin-top: var(--gap-md);
   display: flex;
-  gap: 40px;
+  gap: 30px 20px;
   padding: 0 25px;
   align-items: flex-start;
   justify-content: space-between;
@@ -20,5 +21,15 @@
     flex-wrap: wrap;
     gap: 10px 10px;
     max-width: 540px;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 1150px) {
+    flex-direction: column;
+    gap: 20px;
+
+    &__nav {
+      justify-content: flex-start;
+    }
   }
 } 

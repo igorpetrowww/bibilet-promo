@@ -5,13 +5,13 @@
 }
 
 @mixin on-md {
-  @media (width < 960px) {
+  @media (width < 1000px) {
     @content;
   }
 }
 
 @mixin from-lg {
-  @media (width >= 960px) {
+  @media (width >= 1000px) {
     @content;
   }
 }

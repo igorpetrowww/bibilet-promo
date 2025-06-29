@@ -1,7 +1,11 @@
 .features {
   display: grid;
-  grid-template-columns: minmax(200px, 400px) 1fr;
-  gap: clamp(40px, 10vw, 100px);
+  grid-template-columns: 420px 1fr;
+  gap: clamp(40px, 5vw, 100px);
+
+  @media (max-width: 1100px) {
+    grid-template-columns: 360px 1fr;
+  }
 
   @include on-sm {
     flex-direction: column-reverse;
@@ -9,9 +13,9 @@
 
     .switcher {
       position: sticky;
-      top: 10px;
-      width: calc(100% + 30px);
-      margin-left: -15px;
+      top: 5px;
+      width: calc(100% + 20px);
+      margin-left: -10px;
 
       &:before {
         content: '';
@@ -44,8 +48,9 @@
     display: block;
     position: absolute;
     inset: -10px -15px;
-    border-radius: 7px;
+    border-radius: 16px 16px 16px 0;
     z-index: -1;
+    transition: .5s;
 
     @include on-sm {
       inset: -5px -10px;
@@ -53,6 +58,7 @@
   }
 
   &.active:before {
-    background: #E5F2F4;
+    transition: .15s;
+    background: var(--pale2);
   }
 } 

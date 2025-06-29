@@ -1,14 +1,9 @@
 include ../components/_mixins.pug
 
 doctype html
-html
+html(lang="ru")
   block vars
-  meta(charset="utf-8")
-  meta(name="viewport" content="width=device-width")
-  title=title || defaultTitle
-  meta(name="description" content=desc || defaultDesc)
-
-  link(rel="stylesheet" href="/src/styles/_index.scss")
+  include parts/meta.pug
 
 body
   +header
@@ -17,3 +12,5 @@ body
   +footer
 
   script(src="/src/scripts/_index.js" type="module")
+
+  include parts/metrika.pug

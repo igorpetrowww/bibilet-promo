@@ -6,8 +6,8 @@
   background: #fff;
   position: relative;
 
-  &:before {
-    content: '***';
+  &:not(.no-head):before {
+    content: 'bibilet.ru';
     background: #fff;
     padding: 5px;
     text-align: center;
@@ -19,14 +19,8 @@
     }
   }
 
-  &:after {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
   img {
-    aspect-ratio: 16/10;
+    aspect-ratio: 1280/768;
     object-fit: contain;
     object-position: center;
   }

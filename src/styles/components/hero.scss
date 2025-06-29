@@ -1,7 +1,28 @@
 .hero {
   margin-bottom: var(--gap-xlg);
+  text-align: center;
+
+  @include on-sm {
+    margin-bottom: var(--gap-lg);
+  }
 
   &__title {
-    max-width: 350px;
+      font-size: clamp(32px, 22vw, 340px);
+      margin: 0 0 0 -.02em !important;
+      font-weight: 50;
+      letter-spacing: -.01em;
+      text-transform: uppercase;
+      font-style: italic;
+
+      background: -webkit-linear-gradient(#d1dfe5, #abb1c7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+
+  &__subtitle {
+    max-width: 500px;
+    margin: 0 auto;
   }
 } 
+
+

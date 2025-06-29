@@ -1,3 +1,5 @@
+@import '_mixins';
+
 .wrap {
   width: 100%;
   max-width: 1440px;
@@ -5,24 +7,35 @@
   box-sizing: border-box;
 }
 
-.plate {
-  padding: 30px 25px;
+.page {
+  --cut-out: clamp(16px, 5vw, 55px); 
+  padding: 60px 30px 100px;
   border-radius: 32px;
+  min-height: 75vh;
+
+  -webkit-mask: 
+    radial-gradient(var(--cut-out) at 50% calc(var(--cut-out) * -.3), #0000 calc(100% - 1px), #000),
+    radial-gradient(var(--cut-out) at 50% calc(100% - var(--cut-out) * -.3), #0000 calc(100% - 1px), #000),
+    linear-gradient(black,black)
+    ;
+    -webkit-mask-composite: destination-in;
+    mask-composite: exclude;
 
   @include on-sm {
     padding: 20px 15px;
   }
 
-  &.topGrad {
-    background: linear-gradient(to bottom, #C6FFF5, transparent);
-    background-size: 100% 75vh;
-    background-repeat: no-repeat;
+    // background: linear-gradient(to bottom, hsl(0deg 0% 100% / 10%), transparent), linear-gradient(to top, hsl(0deg 0% 100% / 10%), transparent);
+    // background-size: 100% 75vh;
+    // background-position: top center, bottom center;
+    // background-repeat: no-repeat;
+    // background: oklch(0.82 0.35 145.75 / 0.1);
+    background: #fff;
 
     @include on-sm {
       padding: 20px 15px;
       background-size: 100% 300px;
     }
-  }
 }
 
 .switcher {
@@ -32,6 +45,8 @@
     position: sticky;
     top: 15px;
     display: none;
+    border-radius: 32px;
+    background: linear-gradient(to bottom, #fff 75%, transparent);
 
     &.active {
       display: block;
@@ -41,4 +56,10 @@
 
 .disabled {
   color: var(--pale);
+}
+
+
+.hr {
+  height: 20px;
+  margin: var(--gap-lg) 0;
 }

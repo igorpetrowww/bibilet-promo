@@ -1,10 +1,17 @@
+@import '_mixins';
+
 :root {
   font-family: Inter, system-ui;
+  font-weight: 350;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.25;
   text-box-trim: trim-both;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @include on-md {
+    font-size: 16px;
+  }
 }
 
 p {
@@ -27,31 +34,56 @@ a {
 
 .sm {
   --gap-p: .5em;
-  font-size: 14px;
-  line-height: 1.1;
+  font-size: .8rem;
+  line-height: 1.15;
 }
 
 .lg {
-  font-size: 22px;
+  font-size: 1.3rem;
+  line-height: 1.33;
+}
+
+h1,
+.h1 {
+  font-weight: 500;
+  font-size: 1.77rem;
+  line-height: 1.15;
+
+  &:not(:last-child) {
+    margin-bottom: .33em;
+  }
 }
 
 
 h2 {
   font-weight: 500;
   font-size: 1.3rem;
-  line-height: 1.1;
-  
+  line-height: 1.2;
+
+  &:not(:first-child) {
+    margin-top: .5em;
+  }
+
   &:not(:last-child) {
-    margin-bottom: .3em;
+    margin-bottom: .33em;
   }
 }
 
 h3 {
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.1;
   
-  &:not(:last-child) {
-    margin-bottom: .3em;
+  &:not(:first-child) {
+    margin-top: 1.33em;
   }
+
+  &:not(:last-child) {
+    margin-bottom: .33em;
+  }
+}
+
+b,
+strong {
+  font-weight: 550;
 }
