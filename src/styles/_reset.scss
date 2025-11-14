@@ -64,7 +64,9 @@ input {
 
 a,
 button,
-input {
+input,
+textarea,
+select {
   outline: none;
   color: inherit;
 

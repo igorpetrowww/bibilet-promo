@@ -21,7 +21,7 @@ body {
   }
 
   @include on-md {
-    padding: 10px 10px 20px;
+    padding: 20px 0 20px;
   }
 }
 
@@ -204,13 +204,13 @@ body {
 .iphone {
   color: var(--pale);
   border-radius: clamp(10px, 2.5vw, 35px);
-  border: 0.5px solid;
+  border: 1px solid var(--pale2);
   overflow: hidden;
   background: #fff;
   position: relative;
 
   @include on-sm {
-    border-radius: 20px;
+    border-radius: 16px;
   }
 
   &:before {
@@ -239,5 +239,13 @@ body {
     border-radius: 20px;
     translate: -50% 0;
     opacity: 0.33;
+  }
+}
+
+.not-found {
+  padding: 25vh 15px;
+
+  h1 {
+    font-size: clamp(2rem, 10vw, 4rem);
   }
 }

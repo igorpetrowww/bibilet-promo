@@ -21,10 +21,6 @@
     -webkit-mask-composite: destination-in;
     mask-composite: exclude;
 
-  @include on-sm {
-    padding: 20px 15px;
-  }
-
     // background: linear-gradient(to bottom, hsl(0deg 0% 100% / 10%), transparent), linear-gradient(to top, hsl(0deg 0% 100% / 10%), transparent);
     // background-size: 100% 75vh;
     // background-position: top center, bottom center;
@@ -33,8 +29,17 @@
     background: #fff;
 
     @include on-sm {
-      padding: 20px 15px;
+      --cut-out: 25px;
+      padding: 20px 15px 30px;
       background-size: 100% 300px;
+
+      -webkit-mask: 
+      radial-gradient(var(--cut-out) at 50% calc(var(--cut-out) * -.3), #0000 calc(100% - 1px), #000),
+      radial-gradient(1px at 50% calc(100% - var(--cut-out) * -.3), #0000 calc(100% - 1px), #000),
+      linear-gradient(black,black)
+      ;
+      -webkit-mask-composite: destination-in;
+      mask-composite: exclude;
     }
 }
 
@@ -46,7 +51,7 @@
     top: 15px;
     display: none;
     border-radius: 32px;
-    background: linear-gradient(to bottom, #fff 75%, transparent);
+    background: linear-gradient(to bottom, #fff 90%, transparent);
 
     &.active {
       display: block;
@@ -62,4 +67,14 @@
 .hr {
   height: 20px;
   margin: var(--gap-lg) 0;
+
+  @include on-sm {
+    margin: var(--gap-md) 0;
+  }
+}
+
+.no-sm {
+  @include on-sm {
+    display: none !important;
+  }
 }

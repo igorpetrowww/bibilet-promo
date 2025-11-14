@@ -66,6 +66,10 @@ h2 {
 
   &:not(:last-child) {
     margin-bottom: .33em;
+
+    @include on-sm {
+      margin-bottom: .3em;
+    }
   }
 }
 

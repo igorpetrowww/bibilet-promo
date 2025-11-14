@@ -1,7 +1,7 @@
 .browser {
   color: var(--pale);
   border-radius: 7px;
-  border: .5px solid;
+  border: 1px solid var(--pale2);
   overflow: hidden;
   background: #fff;
   position: relative;
@@ -12,7 +12,7 @@
     padding: 5px;
     text-align: center;
     display: block;
-    border-bottom: .5px solid;
+    border-bottom: 1px solid var(--pale2);
 
     @include on-md {
       padding: 3px;

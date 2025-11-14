@@ -2,20 +2,21 @@ mixin footer
   footer.footer.sm.wrap
     .footer__about
       div 
-        p Билетный оператор<br> ООО «Бибилет»
+        p Билетный оператор<br> «Бибилет»
         p: a(href="privet@bibilet.ru") privet@bibilet.ru
 
       div 
-        p Санкт-Петербург, 127015, <br>Набережная Фонтанки, 36, п. 32
+        p Санкт-Петербург, <br>Красноармейская 12-я улица, 18-20
         p: a(href="/about") Реквизиты
 
     nav.footer__nav
       a(href="/offer") Публичная оферта
       a(href="/rules") Правила использования
-      a(href="/privacy") Политика обработки данных
-      a(href="/dog") Шаблон договора
+      //- a(href="/dog") Шаблон договора
       a(href="/pay-and-refund") Оплата и возврат
-      span.disabled Документация для разработчиков
+      a(href="/privacy") Политика обработки данных
+
+      //- span.disabled Документация для разработчиков
 
   
 
